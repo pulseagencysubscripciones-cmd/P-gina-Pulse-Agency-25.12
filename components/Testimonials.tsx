@@ -1,0 +1,185 @@
+
+import React from 'react';
+import { Star, CheckCircle2, ExternalLink, Quote } from 'lucide-react';
+
+const reviews = [
+  {
+    name: "Carlos G.",
+    company: "Restaurante en Miami",
+    review: "Después del diagnóstico entendí por qué mis campañas no funcionaban. Me lo explicaron claro, con ejemplos de mi negocio. Nunca sentí que me vendían. Solo que me ayudaban.",
+    platform: "google",
+    stars: 5,
+    date: "Hace 1 día"
+  },
+  {
+    name: "Roberto Garcia",
+    company: "Miami Roofing Pro",
+    review: "Nuestra organización interna mejoró drásticamente. Ahora tenemos visibilidad de los clientes interesados y no perdemos mensajes.",
+    platform: "google",
+    stars: 5,
+    date: "Hace 3 días"
+  },
+  {
+    name: "Ana Maria Torres",
+    company: "Dental Spa TX",
+    review: "Implementar un CRM ordenado nos ayudó a entender mejor de dónde vienen nuestros pacientes. Excelente servicio de consultoría.",
+    platform: "trustpilot",
+    stars: 5,
+    date: "Hace 1 semana"
+  },
+  {
+    name: "Carlos Velasco",
+    company: "Velasco Logistics",
+    review: "Poder responder consultas básicas de forma automática nos ahorra horas a la semana que dedicamos a operar el negocio.",
+    platform: "google",
+    stars: 5,
+    date: "Hace 3 días"
+  },
+  {
+    name: "Sofía Mendez",
+    company: "E-commerce Beauty",
+    review: "El equipo entiende el mercado latino. Nos ayudaron a profesionalizar nuestras campañas publicitarias.",
+    platform: "trustpilot",
+    stars: 5,
+    date: "Hace 2 semanas"
+  }
+];
+
+const Testimonials: React.FC = () => {
+  return (
+    <section className="py-24 bg-pulseDark overflow-hidden relative border-y border-white/5">
+      {/* Purple Ambient Light */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-pulsePurple/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+      <div className="container mx-auto px-6 mb-16 text-center relative z-10">
+        <h2 className="text-3xl font-bold mb-4">Lo que dicen nuestros <span className="text-transparent bg-clip-text bg-gradient-to-r from-pulsePurple to-pulseMagenta">Clientes</span></h2>
+        
+        {/* Featured Testimonial */}
+        <div className="max-w-3xl mx-auto mt-12 mb-16 relative">
+            <div className="absolute -top-6 -left-6 text-pulsePurple/30 transform -scale-x-100">
+                <Quote className="w-16 h-16 fill-current" />
+            </div>
+            <div className="bg-gradient-to-br from-pulsePurple/10 to-[#0a051a] border border-pulsePurple/30 p-8 md:p-12 rounded-3xl relative backdrop-blur-md shadow-[0_0_30px_rgba(106,0,255,0.1)]">
+                <p className="text-xl md:text-2xl text-white font-medium italic leading-relaxed mb-6">
+                    "Después del diagnóstico entendí por qué mis campañas no funcionaban. Me lo explicaron claro, con ejemplos de mi negocio. <span className="text-pulseCyan">Nunca sentí que me vendían. Solo que me ayudaban.</span>"
+                </p>
+                <div className="flex items-center justify-center space-x-4">
+                    <div className="w-12 h-12 bg-pulsePurple/20 rounded-full flex items-center justify-center text-pulsePurple font-bold border border-pulsePurple/30">CG</div>
+                    <div className="text-left">
+                        <div className="font-bold text-white">Carlos G.</div>
+                        <div className="text-sm text-gray-400">Restaurante en Miami</div>
+                    </div>
+                    <div className="flex text-yellow-400">
+                        {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-current" />)}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 mt-8">
+           {/* Google Reviews Link */}
+           <a 
+             href="https://share.google/0lRmnIiHvaioq6sJz" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             className="flex items-center group bg-pulsePurple/5 px-6 py-3 rounded-full border border-pulsePurple/20 hover:bg-pulsePurple/20 hover:scale-105 transition-all cursor-pointer shadow-[0_0_15px_rgba(106,0,255,0.1)]"
+           >
+              <span className="font-bold text-xl mr-3 text-white">4.9/5</span>
+              <div className="flex text-yellow-400 mr-3">
+                {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-current" />)}
+              </div>
+              <div className="text-left">
+                  <span className="block text-gray-400 text-xs font-bold uppercase tracking-wider group-hover:text-white transition-colors">Google Reviews</span>
+                  <span className="text-[10px] text-gray-500 flex items-center">Ver reseñas reales <ExternalLink className="w-2 h-2 ml-1" /></span>
+              </div>
+           </a>
+
+           {/* Divider */}
+           <div className="hidden md:block h-8 w-px bg-pulsePurple/20"></div>
+
+           {/* Trustpilot Link */}
+           <a 
+             href="https://www.trustpilot.com/review/pulseagencyusa.com"
+             target="_blank" 
+             rel="noopener noreferrer"
+             className="flex items-center group bg-pulsePurple/5 px-6 py-3 rounded-full border border-pulsePurple/20 hover:bg-pulsePurple/20 hover:scale-105 transition-all cursor-pointer shadow-[0_0_15px_rgba(106,0,255,0.1)]"
+           >
+              <span className="font-bold text-xl mr-3 text-white">4.8/5</span>
+              <div className="flex text-[#00b67a] mr-3">
+                {[1,2,3,4,5].map(i => <div key={i} className="w-5 h-5 bg-[#00b67a] mr-0.5 flex items-center justify-center">
+                    <Star className="w-3 h-3 text-white fill-current" />
+                </div>)}
+              </div>
+              <div className="text-left">
+                  <span className="block text-gray-400 text-xs font-bold uppercase tracking-wider group-hover:text-white transition-colors">Trustpilot</span>
+                  <span className="text-[10px] text-gray-500 flex items-center">Ver reseñas reales <ExternalLink className="w-2 h-2 ml-1" /></span>
+              </div>
+           </a>
+        </div>
+      </div>
+
+      {/* Marquee Effect Container */}
+      <div className="relative w-full mt-16">
+        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-pulseDark to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-pulseDark to-transparent z-10 pointer-events-none"></div>
+        
+        <div className="flex space-x-6 animate-scroll w-max hover:pause-animation">
+          {[...reviews, ...reviews, ...reviews].map((review, idx) => (
+            <div key={idx} className="w-[350px] bg-pulsePurple/5 border border-pulsePurple/10 p-6 rounded-2xl backdrop-blur-sm hover:border-pulseMagenta/50 hover:bg-pulsePurple/10 transition-all duration-300 group shadow-[0_0_20px_rgba(106,0,255,0.05)]">
+               <div className="flex justify-between items-start mb-4">
+                  <div className="flex items-center space-x-3">
+                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pulsePurple to-indigo-900 flex items-center justify-center font-bold text-sm text-white shadow-inner border border-white/10">
+                        {review.name.charAt(0)}
+                     </div>
+                     <div>
+                        <h4 className="font-bold text-sm text-white group-hover:text-pulseCyan transition-colors">{review.name}</h4>
+                        <p className="text-xs text-gray-400">{review.company}</p>
+                     </div>
+                  </div>
+                  {review.platform === 'google' ? (
+                     <div className="bg-white p-1 rounded-full w-6 h-6 flex items-center justify-center shadow-lg">
+                        <span className="font-bold text-blue-500 text-xs">G</span>
+                     </div>
+                  ) : (
+                     <div className="bg-[#00b67a] p-1 rounded-full w-6 h-6 flex items-center justify-center shadow-lg">
+                        <Star className="w-3 h-3 text-white fill-current" />
+                     </div>
+                  )}
+               </div>
+               
+               <div className="flex mb-3">
+                  {[1,2,3,4,5].map(i => (
+                     <Star key={i} className={`w-4 h-4 ${review.platform === 'google' ? 'text-yellow-400 fill-current' : 'text-[#00b67a] fill-current'}`} />
+                  ))}
+               </div>
+
+               <p className="text-gray-300 text-sm leading-relaxed mb-4 group-hover:text-white transition-colors">"{review.review}"</p>
+               
+               <div className="flex justify-between items-center pt-4 border-t border-white/5 group-hover:border-white/10">
+                  <span className="text-xs text-gray-500">{review.date}</span>
+                  <div className="flex items-center text-pulseCyan text-xs opacity-70 group-hover:opacity-100 transition-opacity">
+                     <CheckCircle2 className="w-3 h-3 mr-1" /> Cliente Verificado
+                  </div>
+               </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-33.33%); }
+        }
+        .animate-scroll {
+          animation: scroll 40s linear infinite;
+        }
+        .hover\\:pause-animation:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+    </section>
+  );
+};
+
+export default Testimonials;
