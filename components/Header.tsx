@@ -26,10 +26,13 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo Area */}
         <div className="flex items-center space-x-3 group cursor-pointer">
-          <div className="relative flex items-center justify-center w-10 h-10 rounded-full border-2 border-pulseMagenta transition-transform duration-300 group-hover:scale-110">
-            <span className="font-bold text-xl text-white">P</span>
-            <div className="absolute -top-1 -right-1 w-3 h-3 bg-pulseCyan rounded-full border-2 border-pulseDark"></div>
-          </div>
+          {/* Logo Image - User provided */}
+          <img 
+            src="/logo.png" 
+            alt="Pulse Agency Logo" 
+            className="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110" 
+          />
+
           <div className="flex flex-col leading-none">
             <span className="text-xl font-black tracking-widest text-white">PULSE</span>
             <span className="text-[10px] font-bold tracking-[0.3em] text-pulseMagenta">AGENCY</span>

@@ -125,9 +125,13 @@ For legal inquiries, contact: info@pulseagencyusa.com
           {/* Brand Column */}
           <div className="md:col-span-1">
              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-8 h-8 rounded-full border-2 border-pulseMagenta flex items-center justify-center">
-                    <span className="font-bold text-white">P</span>
-                </div>
+                {/* Logo Image */}
+                <img 
+                    src="/logo.png" 
+                    alt="Pulse Agency Logo" 
+                    className="w-10 h-10 object-contain" 
+                />
+
                 <div className="flex flex-col leading-none">
                     <span className="font-black text-white tracking-widest">PULSE</span>
                     <span className="text-[9px] font-bold text-pulseMagenta tracking-[0.3em]">AGENCY</span>
