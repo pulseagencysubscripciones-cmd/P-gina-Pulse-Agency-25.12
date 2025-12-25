@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -84,9 +85,9 @@
     <meta property="twitter:description" content="Automatización inteligente y Growth Marketing para escalar tu negocio en Florida y todo Estados Unidos.">
     <meta property="twitter:image" content="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=90&w=1920&auto=format&fit=crop">
 
-    <!-- Styles & Fonts -->
+    <!-- Styles & Fonts - Switched to Poppins -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -99,7 +100,7 @@
                         pulseCard: '#0A1322'
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Poppins', 'sans-serif'],
                     },
                     boxShadow: {
                         'neon-cyan': '0 0 20px rgba(0, 242, 255, 0.3)',
@@ -125,8 +126,11 @@
             background-color: #020B1A;
             color: white;
             overflow-x: hidden;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-weight: 400;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700; /* Force bold/semibold as default for headings */
         }
         .text-gradient-cyan {
             background: linear-gradient(to right, #00F2FF, #6a00ff);

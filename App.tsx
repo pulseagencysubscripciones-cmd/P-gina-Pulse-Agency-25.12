@@ -60,7 +60,7 @@ const App: React.FC = () => {
                      className="bg-pulseMagenta hover:bg-[#a0005d] px-10 py-5 rounded-full font-bold text-lg md:text-xl text-white shadow-[0_0_30px_rgba(188,0,109,0.4)] hover:shadow-[0_0_50px_rgba(188,0,109,0.6)] hover:scale-105 transition-all flex items-center uppercase tracking-wider"
                    >
                      <CalendarClock className="w-6 h-6 mr-3" />
-                     RESERVAR ESPACIO <ArrowRight className="ml-3 w-6 h-6" />
+                     AGENDE UNA CITA <ArrowRight className="ml-3 w-6 h-6" />
                    </a>
                 </div>
             </div>

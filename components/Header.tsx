@@ -17,16 +17,16 @@ const Header: React.FC = () => {
 
   return (
     <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${
         isScrolled 
-          ? 'bg-pulseDark/95 backdrop-blur-md py-4 border-b border-white/5' 
+          ? 'bg-pulseDark/80 backdrop-blur-lg py-3 border-b border-white/10 shadow-xl' 
           : 'bg-transparent py-6 border-b border-transparent'
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo Area */}
-        <div className="flex items-center space-x-3">
-          <div className="relative flex items-center justify-center w-10 h-10 rounded-full border-2 border-pulseMagenta">
+        <div className="flex items-center space-x-3 group cursor-pointer">
+          <div className="relative flex items-center justify-center w-10 h-10 rounded-full border-2 border-pulseMagenta transition-transform duration-300 group-hover:scale-110">
             <span className="font-bold text-xl text-white">P</span>
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-pulseCyan rounded-full border-2 border-pulseDark"></div>
           </div>
@@ -38,11 +38,11 @@ const Header: React.FC = () => {
         
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center space-x-10">
-          <a href="#servicios" className="text-xs font-bold tracking-widest text-gray-300 hover:text-white uppercase transition-colors">
+          <a href="#servicios" className="text-xs font-bold tracking-widest text-gray-300 hover:text-pulseCyan uppercase transition-colors">
             Servicios
           </a>
-          <a href="#calculadora" className="text-xs font-bold tracking-widest text-gray-300 hover:text-white uppercase transition-colors">
-            Calculadora 2026
+          <a href="#agenda" className="text-xs font-bold tracking-widest text-gray-300 hover:text-pulseCyan uppercase transition-colors">
+            Agenda 2026
           </a>
           <a href="tel:+13074293264" className="flex items-center text-xs font-bold tracking-widest text-white hover:text-pulseCyan uppercase transition-colors">
             <Phone className="w-4 h-4 mr-2" />
@@ -52,7 +52,7 @@ const Header: React.FC = () => {
             href="https://calendly.com/pulseagencyllc/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-pulseMagenta hover:bg-[#a0005d] px-8 py-3 rounded-full font-bold text-xs text-white shadow-lg transition-all transform hover:scale-105 uppercase tracking-wider"
+            className="bg-pulseMagenta hover:bg-[#a0005d] px-8 py-3 rounded-full font-bold text-xs text-white shadow-lg transition-all transform hover:scale-105 active:scale-95 uppercase tracking-wider"
           >
             Consultoría Gratis
           </a>
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Toggle */}
         <button 
-          className="lg:hidden text-white"
+          className="lg:hidden text-white p-2 hover:bg-white/5 rounded-lg transition-colors"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
@@ -69,12 +69,12 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-pulseDark border-b border-white/10 shadow-2xl animate-in slide-in-from-top-5 duration-300">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-pulseDark/95 backdrop-blur-xl border-b border-white/10 shadow-2xl animate-in slide-in-from-top-5 duration-300">
           <div className="flex flex-col p-8 space-y-6 text-center">
-            <a href="#servicios" onClick={() => setIsMenuOpen(false)} className="text-sm font-bold tracking-widest text-white uppercase">Servicios</a>
-            <a href="#calculadora" onClick={() => setIsMenuOpen(false)} className="text-sm font-bold tracking-widest text-white uppercase">Calculadora 2026</a>
+            <a href="#servicios" onClick={() => setIsMenuOpen(false)} className="text-sm font-bold tracking-widest text-white uppercase hover:text-pulseCyan transition-colors">Servicios</a>
+            <a href="#agenda" onClick={() => setIsMenuOpen(false)} className="text-sm font-bold tracking-widest text-white uppercase hover:text-pulseCyan transition-colors">Agenda 2026</a>
             <hr className="border-white/10" />
-            <a href="tel:+13074293264" className="flex items-center justify-center text-sm font-bold text-white">
+            <a href="tel:+13074293264" className="flex items-center justify-center text-sm font-bold text-white hover:text-pulseCyan transition-colors">
               <Phone className="w-4 h-4 mr-2" />
               +1 (307) 429-3264
             </a>
@@ -82,7 +82,7 @@ const Header: React.FC = () => {
               href="https://calendly.com/pulseagencyllc/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-pulseMagenta py-4 rounded-full font-bold text-white uppercase tracking-wider"
+              className="w-full bg-pulseMagenta py-4 rounded-full font-bold text-white uppercase tracking-wider shadow-lg active:scale-95 transition-transform"
             >
               Consultoría Gratis
             </a>

@@ -16,10 +16,10 @@ const Hero: React.FC = () => {
       {/* Background Gradient Spot */}
       <div className="absolute top-0 right-0 w-[50vw] h-[50vh] bg-pulsePurple/20 blur-[150px] rounded-full pointer-events-none"></div>
 
-      <div className="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         
-        {/* Left Content */}
-        <div className="lg:w-1/2 text-left">
+        {/* Left Content - Reduced width slightly to give more room to video */}
+        <div className="lg:w-5/12 text-left">
           <div className="inline-flex items-center border border-pulseCyan/30 bg-pulseCyan/5 rounded-full px-4 py-1.5 mb-8">
             <span className="w-2 h-2 rounded-full bg-pulseCyan animate-pulse mr-2"></span>
             <span className="text-pulseCyan text-[10px] md:text-xs font-bold tracking-widest uppercase">
@@ -65,9 +65,9 @@ const Hero: React.FC = () => {
           </div>
         </div>
         
-        {/* Right Content - White Video Card + Mobile CTA */}
-        <div className="lg:w-1/2 w-full flex flex-col gap-8">
-          <div className="relative bg-white rounded-[2rem] p-4 shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+        {/* Right Content - Increased width for larger video presence */}
+        <div className="lg:w-7/12 w-full flex flex-col gap-8">
+          <div className="relative bg-white rounded-[2rem] p-2 shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
              {/* Label Tag */}
              <div className="absolute top-8 left-8 z-20 flex items-center bg-gray-600/90 backdrop-blur-sm px-4 py-2 rounded-full">
                 <span className="w-2 h-2 rounded-full bg-red-500 mr-2 animate-pulse"></span>
@@ -75,7 +75,7 @@ const Hero: React.FC = () => {
              </div>
 
              {/* Video Container */}
-             <div className="relative bg-gray-100 rounded-[1.5rem] overflow-hidden aspect-video shadow-inner group cursor-pointer">
+             <div className="relative bg-gray-100 rounded-[1.8rem] overflow-hidden aspect-video shadow-inner group cursor-pointer">
                  <iframe 
                     src="https://player.vimeo.com/video/1148993755?context=Vimeo%5CController%5CApi%5CResources%5CVideoController.&h=88b06792f0" 
                     className="absolute inset-0 w-full h-full" 
